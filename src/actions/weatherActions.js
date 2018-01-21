@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 function fetchWeather(location){
-    const url = `http://api.wunderground.com/api/7c8a2fdc495cdb07/conditions/q/${location.state}/${location.city}.json`;
+    const url = `http://api.wunderground.com/api/PUT_YOUR_WEATHER_KEY/conditions/q/${location.state}/${location.city}.json`;
     return function(dispatch){
         dispatch({ type: "FETCH_WEATHER"});
         axios.get(url)
